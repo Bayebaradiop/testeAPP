@@ -1,0 +1,27 @@
+core:
+  database: App\Core\Database
+  session: App\Core\Session
+  router: App\Core\Router
+
+abstract:
+  abstractRepository: App\Core\AbstracteRipository
+  abstractService: App\Core\AbstracteService
+  abstractEntity: App\Core\AbstractEntity
+  abstractController: App\Core\AbstracteController
+
+services:
+  smsService: App\Service\SmsService
+  citoyenRepository: App\Repository\CitoyenRepository
+  securityService: App\Service\SecurityService
+  transactionService: App\Service\TransactionService
+
+controllers:
+  compteController: App\Controller\CompteController
+  securiteController: App\Controller\SecuriteController
+  erreurController: App\Controller\ErreurController
+  TransactionController: App\Controller\TransactionController
+
+repositories:
+  userRepository: App\Ripository\UserRipository
+  CompteRipository: App\Ripository\CompteRipository
+  TransactionRipository: App\Ripository\TransactionRipository

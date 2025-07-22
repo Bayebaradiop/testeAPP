@@ -1,0 +1,32 @@
+{
+    "name": "mouhamadou-lamine/projet-challenge1",
+    "autoload": {
+        "psr-4": {
+            "MouhamadouLamine\\ProjetChallenge1\\": "src/",
+            "App\\Entity\\": "src/entity/",
+            "App\\Ripository\\": "src/ripository/",
+            "App\\Service\\": "src/service/",
+            "App\\Core\\": "config/core/",
+            "App\\Config\\": "config",
+            "App\\middlewares\\": "config/middlewares/",
+            "App\\Controller\\": "src/Controller/"
+
+        }
+        
+    },
+    "authors": [
+        
+        {
+            "name": "bara"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.6",
+        "twilio/sdk": "^8.6",
+        "symfony/yaml": "^7.3"
+    },
+    "scripts": {
+        "database:migrate": "php migrations/Migration.php",
+        "database:seed": "php seeders/seeder.php"
+    }
+}
