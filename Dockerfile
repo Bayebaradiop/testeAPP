@@ -25,7 +25,7 @@ RUN COMPOSER_ALLOW_SUPERUSER=1 composer database:migrate
 RUN COMPOSER_ALLOW_SUPERUSER=1 composer database:seed
 
 # Configure Nginx
-COPY .docker/nginx/default.conf /etc/nginx/sites-available/default
+COPY nginx.conf /etc/nginx/sites-available/default
 RUN ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
 RUN rm -f /etc/nginx/sites-enabled/default.bak
 
