@@ -21,8 +21,6 @@ COPY . .
 
 # Install PHP dependencies
 RUN composer install --no-dev --optimize-autoloader
-RUN COMPOSER_ALLOW_SUPERUSER=1 composer database:migrate
-RUN COMPOSER_ALLOW_SUPERUSER=1 composer database:seed
 
 # Configure Nginx
 COPY nginx.conf /etc/nginx/sites-available/default
